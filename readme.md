@@ -1,5 +1,5 @@
-NODE VOLUME
-===========
+NODE REMOTE VOLUME
+==================
 
 Small server to control the volume of my computer from my smartphone.  
 For now, proof of concept for fun, but may be useful !
@@ -22,5 +22,5 @@ On the phone :
 Todo
 ----
 
-[] Make html page nice
-[] Update phone if volumes changes from the computer buttons
+* [] Make html page nice
+* [] Update phone if volumes changes from the computer buttons

@@ -1,6 +1,6 @@
 {
-  "name": "node_volume",
-  "version": "1.0.0",
+  "name": "node-remote-volume",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {

@@ -20,11 +20,18 @@ app.use(function(req, res, next) {
 app.use(express.static('.'));
 
 
+app.get('/get', function (req, res) {
+  changeVolume(0, function(vol) {
+    res.send(vol.toString())
+  })
+})
+
 app.get('/up', function (req, res) {
   changeVolume(5, function(vol) {
     res.send(vol.toString())
   })
 })
+
 app.get('/down', function (req, res) {
   changeVolume(-5, function(vol) {
     res.send(vol.toString())

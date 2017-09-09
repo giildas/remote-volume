@@ -2,19 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <link rel="manifest" href="/manifest.json">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>VOLUME</title>
+  <style>
+    html, body { height: 100%; margin: 0;padding: 0; }
+    * { box-sizing: border-box; }
+    body{
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to top, #3D7EAA, #FFE47A);
+    }
+    h1{
+      margin: 0;
+      padding: 0;
+    }
+    button{
+      width: 100%;
+      color: #fff;
+      flex-grow: 2;
+      border: none;
+      background: none;
+      outline: none;
+      font-size: 2em;
+    }
+    button:active, button:focus {
+      outline: none;
+    }
+
+    ::-moz-focus-inner {
+      border: 0;
+    }
+
+  </style>
 </head>
 <body>
+  <button class="up" onclick="up()">+</button>
   <h1 id="volume"></h1>
-  <button onclick="up()">+</button>
-  <button onclick="down()">-</button>
+  <button class="down" onclick="down()">-</button>
   <div id="error"></div>
 
   <script type="text/javascript">
-
     var base_url = "http://192.168.1.41:3000"
+
+    get()
+
+
+    function get(){
+      let url = base_url + "/get"
+      req(url)
+    }
+
     function up(){
       let url = base_url + "/up"
       req(url)
